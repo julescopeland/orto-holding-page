@@ -1,0 +1,127 @@
+// solids
+$orto-blue:#007396;
+$orto-black:#2C2A29;
+$orto-brown:#703F2A;
+$orto-yellow:#FEDB00;
+$orto-off-white:#DBE2E9;
+
+// gradients
+
+$orto-teal:#05C3DE;
+$orto-light-brown:#AA8066;
+$orto-light-yellow:#F5E1A4;
+$orto-sky-blue:#92C1E9;
+
+@mixin orto-blue-gradient-horizontal {
+  background-color: $orto-blue;
+  @include gradient-horizontal($orto-blue, $orto-teal);
+}
+@mixin orto-blue-gradient-horizontal-reverse {
+  background-color: $orto-blue;
+  @include gradient-horizontal($orto-teal, $orto-blue);
+}
+@mixin orto-blue-gradient-vertical {
+  background-color: $orto-blue;
+  @include gradient-vertical($orto-blue, $orto-teal);
+}
+
+@mixin orto-brown-gradient-horizontal {
+  background-color: $orto-brown;
+  @include gradient-horizontal($orto-brown, $orto-light-brown);
+}
+
+@mixin orto-brown-gradient-horizontal-reverse {
+  background-color: $orto-brown;
+  @include gradient-horizontal($orto-light-brown, $orto-brown);
+}
+
+@mixin orto-brown-gradient-vertical {
+  background-color: $orto-brown;
+  @include gradient-vertical($orto-brown, $orto-light-brown);
+}
+
+@mixin orto-yellow-gradient-horizontal {
+  background-color: $orto-yellow;
+  @include gradient-horizontal($orto-yellow, $orto-light-yellow);
+}
+
+@mixin orto-yellow-gradient-horizontal-reverse {
+  background-color: $orto-yellow;
+  @include gradient-horizontal($orto-light-yellow, $orto-yellow);
+}
+@mixin orto-yellow-gradient-vertical {
+  background-color: $orto-yellow;
+  @include gradient-vertical($orto-yellow, $orto-light-yellow);
+}
+
+@mixin orto-off-white-gradient-horizontal {
+  background-color: $orto-off-white;
+  @include gradient-horizontal($orto-off-white, $orto-sky-blue);
+}
+
+@mixin orto-off-white-gradient-horizontal-reverse {
+  background-color: $orto-off-white;
+  @include gradient-horizontal($orto-sky-blue, $orto-off-white);
+}
+@mixin orto-off-white-gradient-vertical {
+  background-color: $orto-off-white;
+  @include gradient-vertical($orto-off-white, $orto-sky-blue);
+}
+
+@mixin orto-white-gradient-horizontal {
+  background-color: #fff;
+  @include gradient-horizontal(#fff, $orto-off-white);
+}
+
+@mixin orto-white-gradient-horizontal-reverse {
+  background-color: #fff;
+  @include gradient-horizontal($orto-off-white, #fff);
+}
+@mixin orto-white-gradient-vertical {
+  background-color: #fff;
+  @include gradient-vertical(#fff, $orto-off-white);
+}
+
+// $body-bg:;
+
+$textColor:$orto-black;
+
+$linkColor:$orto-blue;
+
+$linkColorHover:$orto-brown;
+
+$blue:$orto-blue;
+
+// $green:;
+
+// $red:;
+
+$yellow:$orto-yellow;
+
+// $orange:;
+
+// $pink:;
+
+// $purple:;
+
+// $wellBackground:$orto-off-white;
+
+
+$sansFontFamily: 'proxima_nova_rgregular', helvetica, arial, sans-serif;
+
+// buttons
+$btnBackground:#fff;
+$btnBackgroundHighlight:$orto-off-white;
+
+$btnPrimaryBackground:$orto-teal;
+$btnPrimaryBackgroundHighlight:$orto-blue;
+
+$btnInfoBackground:$orto-light-brown;
+$btnInfoBackgroundHighlight:$orto-brown;
+
+$btnWarningBackground:$orto-light-yellow;
+$btnWarningBackgroundHighlight:$orto-yellow;
+
+// tables
+$table-bg-accent:$orto-off-white;
+

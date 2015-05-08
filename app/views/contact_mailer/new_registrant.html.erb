@@ -1,0 +1,15 @@
+<h1>New Registrant</h1>
+
+<p>
+  <%= @contact.name.present? ? @contact.name : "Someone" %> has just registered on the holding site.
+</p>
+<p>Their email address is <%= mail_to @contact.email %></p>
+
+<% if @contact.message.present? %>
+  Here's what they have to say:
+  <blockquote>
+    <p><%= simple_format @contact.message %></p>
+  </blockquote>
+<% else -%>
+  <p>They didn't leave a message.</p>
+<% end -%>

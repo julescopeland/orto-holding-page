@@ -1,0 +1,15 @@
+New Registrant
+
+=======================================================================
+
+<%= @contact.name || Someone %> has just registered on the holding site.
+
+Their email address is <%= mail_to @contact.email %>
+
+<% if @contact.message %>
+Here's what they have to say:
+-----------------------------
+<%= simple_format @contact.message %>
+<% else -%>
+They didn't leave a message.
+<% end -%>

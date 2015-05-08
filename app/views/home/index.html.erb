@@ -1,0 +1,30 @@
+<section class="row">
+  <div class="col-xs-12"><%= image_tag 'logos/gradient/black_span3.png', class: 'center-block' %></div>
+  <div class="col-xs-12"><p>&nbsp;</p><p class="text-center lead">Orto is a small-group car sharing service for modern Londoners</p></div>
+</section>
+<section id="keyPoints" class="row">
+  <div class="col-sm-4"><p class="text-center">All the benefits<br>of ownership.</p></div>
+  <div class="col-sm-4"><p class="text-center">None of the<br>hassle.</p></div>
+  <div class="col-sm-4"><p class="text-center">The smart way<br>to drive.</p></div>
+</section>
+<section id="strap" class="row">
+  <div class="col-xs-12"><p class="text-center"><em>It's like owning your dream car, only better</em></p></div>
+</section>
+
+<section id="contact" class='row'>
+  <div class="col-xs-12">
+    <h2 class="text-center">Launching Summer 2015...</h2>
+    <p>If you would like to stay updated on progress, please get in touch using one of the methods below.</p>
+    <p><span class="glyphicon glyphicon-envelope"></span> <%= mail_to 'info@orto.uk.com' %></p>
+    <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:+447949 242735">07949 242 735</a></p>
+    <p>Or tell us who you are here:</p>
+  </div>
+  <div id="form" class='col-sm-6'>
+    <%= bootstrap_form_for(@contact) do |f| %>
+      <%= f.email_field :email, label: 'Email (Required)' %>
+      <%= f.text_field :name, label: 'Name (Optional)' %>
+      <%= f.text_area :message, label: 'Message (Optional)' %>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+</section>

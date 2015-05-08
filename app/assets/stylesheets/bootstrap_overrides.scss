@@ -1,0 +1,161 @@
+h1,h2,h3,h4,h5,h6 {
+  @include main-font-regular;
+  margin-top:$line-height-computed*0.75;
+  &.box-header {
+    margin-top: 0;
+  }
+  img {
+    vertical-align: baseline;
+  }
+}
+
+h1 {
+  font-size: 44px;
+  &.page-header {
+    text-align:center;
+  }
+}
+
+h2 {
+  @include main-font-bold;
+  color:$orto-brown;
+  font-size: 25px;
+}
+
+h3 {
+  display:inline-block;
+  background-color: $orto-black;
+  color:#fff;
+  font-size: 18px;
+  line-height: 1.35;
+  padding: 0 0.3em;
+}
+
+h4 {
+  @include main-font-bold;
+}
+
+.lead {
+  @include main-font-light;
+  font-size: 30px;
+  line-height:1.35;
+  color:$orto-blue;
+}
+.monospaced {
+  font-family: $font-family-monospace;
+}
+a.text-danger {
+  color: $brand-danger;
+}
+
+table.table {
+  caption {
+    text-align: left;
+    font-size: 18px;
+    margin: $line-height-computed/2 0;
+    @include main-font-bold;
+    color:$orto-blue;
+  }
+  tr.bold {
+    @include main-font-bold;
+  }
+  thead {
+    tr {
+      @include main-font-bold;
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-top-color: #fff;
+        border-bottom-color: #fff;
+      }
+    }
+  }
+
+  &.table-striped {
+    thead {
+      th {
+        background-color: $orto-off-white;
+      }
+    }
+    tbody {
+      > tr:nth-child(odd) > td,
+      > tr:nth-child(odd) > th {
+        background-color: $body-bg;
+      }
+      > tr:nth-child(even) > td,
+      > tr:nth-child(even) > th {
+        background-color: $table-bg-accent;
+      }
+    }
+  }
+
+  &.table-bordered {
+    thead {
+      th {
+        
+      }
+    }
+    tbody {
+      tr {
+        td {
+          border-top-color: #ddd;
+          border-bottom-color: #ddd;
+        }
+      }
+    }
+  }
+}
+
+
+
+// .btn {
+//   &:hover { background-color: $btnBackgroundHighlight }
+// }
+// .btn-primary {
+//   &:hover { background-color: $btnPrimaryBackgroundHighlight }
+// }
+// .btn-info {
+//   &:hover { background-color: $btnInfoBackgroundHighlight }
+// }
+// .btn-success {
+//   &:hover { background-color: $btn-success-border }
+// }
+// .btn-warning {
+//   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+//   &:hover { background-color: $btnWarningBackgroundHighlight }
+// }
+// .btn-danger {
+//   &:hover { background-color: $btnDangerBackgroundHighlight }
+// }
+// .btn-inverse {
+//   &:hover { background-color: $btnInverseBackgroundHighlight }
+// }
+
+// popovers
+
+.popover {
+  .popover-title {
+    background-color: $orto-off-white;
+    color: $orto-black;
+    display: block;
+  }
+}
+
+// define mixins for spans
+
+@mixin span($gridColumns) {
+  @include make-md-column($gridColumns);
+}
+@mixin offset($gridColumns) {
+  @include make-md-column-offset($gridColumns);
+}
+@mixin opacity($trans) {
+  filter: alpha(opactiy=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+

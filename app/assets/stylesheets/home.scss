@@ -1,0 +1,19 @@
+#keyPoints {
+  margin-top: $line-height-computed*3;
+  p {
+    font-size: 44px;
+    margin-bottom: $line-height-computed*3;
+  }
+}
+
+#contact {
+  margin-top: $line-height-computed*3;
+  padding-top: $line-height-computed*3;
+  border-top: 1px solid $orto-blue;
+  h2 {
+    margin-bottom: $line-height-computed*2;
+  }
+  .glyphicon {
+    font-size: $font-size-large;
+  }
+}

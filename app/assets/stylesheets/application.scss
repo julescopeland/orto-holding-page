@@ -1,0 +1,12 @@
+@import "proxima_nova_fonts";
+@import "colours";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap_overrides";
+@import "rails_bootstrap_forms";
+
+@import "home";
+
+body {
+  @include main-font-regular;
+}
